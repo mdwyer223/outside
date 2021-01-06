@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://menus/main/menu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="Panel"]
+margin_left = 371.936
+margin_top = 62.8304
+margin_right = 704.936
+margin_bottom = 266.83
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = 138.954
+margin_top = 7.83575
+margin_right = 186.954
+margin_bottom = 21.8357
+text = "outside"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartGameButton" type="Button" parent="."]
+margin_left = 127.668
+margin_top = 76.9964
+margin_right = 199.668
+margin_bottom = 96.9964
+text = "start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
