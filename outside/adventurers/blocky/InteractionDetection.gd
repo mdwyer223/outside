@@ -20,6 +20,7 @@ func _remove_object_from_list(body):
 	for i in range(len(objects)):
 		if objects[i] == body:
 			objects.remove(i)
+			break
 	adjust_focus()
 		
 func check_focus():
