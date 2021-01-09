@@ -12,8 +12,9 @@ func _process(delta):
 	check_focus()
 	
 func _add_object_to_list(body):
-	objects.append(body)
-	adjust_focus()
+	if body.is_interactable():
+		objects.append(body)
+		adjust_focus()
 
 func _remove_object_from_list(body):
 	reset_focus()
@@ -53,6 +54,9 @@ func reset_focus():
 func interact_with_object(player):
 	var object = objects[focus]
 	var response = object.interact(player)
+	
+	if not response:
+		_remove_object_from_list(object)
 
 func get_objects():
 	return objects

@@ -11,6 +11,8 @@ func _ready():
 	add_to_group("player")
 	
 	inventory = load("res://scripts/inventory.gd").new()
+	inventory.set_up()
+	
 	interactions = get_node("InteractionDetection")
 	
 func _process(delta):
@@ -36,8 +38,7 @@ func get_movement_velocity():
 func get_input():
 	if Input.is_action_just_pressed("interact"):
 		if interactions.valid_interaction():
-			print("interaction sent")
-			emit_signal("interacted", self)
+			interactions.interact_with_object(self)
 
 func get_inventory():
 	return inventory
